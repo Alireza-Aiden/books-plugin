@@ -81,4 +81,4 @@ class Books_Meta_Box {
             );
         }
     }
-}
+}    
