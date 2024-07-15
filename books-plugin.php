@@ -7,9 +7,8 @@ Author: Alireza Abedi
 Text Domain: books-plugin
 Domain Path: /languages
 */
-
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit;
 }
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-books-plugin.php';

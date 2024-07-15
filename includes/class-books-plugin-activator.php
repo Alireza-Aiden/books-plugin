@@ -3,7 +3,7 @@
 namespace BooksPlugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit;
 }
 
 class Books_Plugin_Activator {

@@ -8,6 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Books_Plugin_Deactivator {
     public static function deactivate() {
-        // We do not drop tables on deactivate
+        //do not drop tables on deactivate
     }
 }

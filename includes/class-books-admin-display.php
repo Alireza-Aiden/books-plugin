@@ -3,11 +3,9 @@
 namespace BooksPlugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit;
 }
-
 class Books_Admin_Display {
-
     public function add_admin_menu() {
         add_menu_page(
             __( 'Books Info', 'books-plugin' ),
@@ -29,7 +27,6 @@ class Books_Admin_Display {
         if ( ! class_exists( 'WP_List_Table' ) ) {
             require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
         }
-
         class Books_Info_List_Table extends \WP_List_Table {
 
             private $data;
@@ -72,7 +69,6 @@ class Books_Admin_Display {
                 }
             }
         }
-
         $list_table = new Books_Info_List_Table( $books_info );
         $list_table->prepare_items();
         ?>
@@ -86,7 +82,6 @@ class Books_Admin_Display {
         </div>
         <?php
     }
-
     public function enqueue_scripts() {
         wp_enqueue_style( 'books-plugin-admin', plugin_dir_url( __FILE__ ) . '../css/admin.css', array(), '1.0.0', 'all' );
     }

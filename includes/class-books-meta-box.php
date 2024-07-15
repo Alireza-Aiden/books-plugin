@@ -3,9 +3,7 @@
 namespace BooksPlugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
-}
-
+    exit;}
 class Books_Meta_Box {
     public function add_meta_box() {
         add_meta_box(
@@ -17,7 +15,6 @@ class Books_Meta_Box {
             'default'
         );
     }
-
     public function render_meta_box( $post ) {
         wp_nonce_field( 'save_books_meta_box_data', 'books_meta_box_nonce' );
 
@@ -49,7 +46,6 @@ class Books_Meta_Box {
         if ( ! isset( $_POST['books_isbn'] ) ) {
             return;
         }
-
         $isbn = sanitize_text_field( $_POST['books_isbn'] );
 
         update_post_meta( $post_id, '_books_isbn', $isbn );

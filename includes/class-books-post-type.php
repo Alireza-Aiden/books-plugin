@@ -3,9 +3,8 @@
 namespace BooksPlugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit;
 }
-
 class Books_Post_Type {
     public function register_custom_post_type() {
         $labels = array(
@@ -42,12 +41,12 @@ class Books_Post_Type {
 
         register_post_type( 'book', $args );
 
-        // Register taxonomies
+        // Register Taxonomies
         $this->register_taxonomies();
     }
 
     private function register_taxonomies() {
-        // Publisher taxonomy
+        // Publisher Taxonomy
         $labels = array(
             'name'              => _x( 'Publishers', 'taxonomy general name', 'books-plugin' ),
             'singular_name'     => _x( 'Publisher', 'taxonomy singular name', 'books-plugin' ),
@@ -73,7 +72,7 @@ class Books_Post_Type {
 
         register_taxonomy( 'publisher', array( 'book' ), $args );
 
-        // Authors taxonomy
+        // Authors Taxonomy 
         $labels = array(
             'name'              => _x( 'Authors', 'taxonomy general name', 'books-plugin' ),
             'singular_name'     => _x( 'Author', 'taxonomy singular name', 'books-plugin' ),
